@@ -1,0 +1,101 @@
+Documentation:
+
+ Binary Search Tree Application Documentation
+
+## Overview
+
+This Spring Boot application allows users to create and visualize binary search trees (BST) from a series of numbers. It provides functionality to view previously created trees and ensures that the trees are balanced.
+
+## Features
+
+- **User Input Interface**: A web interface for users to enter numbers and view previous trees.
+- **Binary Search Tree Creation**: Constructs a BST from user input and returns it as a JSON structure.
+- **Database Storage**: Stores input numbers and tree structures for future retrieval.
+- **Balanced Trees**: Ensures that the generated trees are balanced.
+- **RESTful Endpoints**: Provides API endpoints for interacting with the application.
+
+## Endpoints
+
+### 1. Enter Numbers Page
+
+- **URL**: `/enter-numbers`
+- **Method**: GET
+- **Description**: Displays an HTML page with an input field for entering numbers and buttons to submit the numbers or view previous trees.
+
+### 2. Process Numbers
+
+- **URL**: `/process-numbers`
+- **Method**: POST
+- **Parameters**:
+  - `numbers` (String): A comma-separated list of numbers.
+- **Description**: Processes the input numbers to create a balanced BST and returns the tree as a JSON object.
+- **Response**: JSON object containing the tree structure and its balanced status.
+
+### 3. Previous Trees
+
+- **URL**: `/previous-trees`
+- **Method**: GET
+- **Description**: Retrieves and displays previous input numbers and their corresponding tree structures from the database.
+
+## Setup Instructions
+
+### Prerequisites
+
+- Java 11 or higher
+- Maven
+- An IDE like IntelliJ IDEA or Eclipse
+
+### Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone [repository-url]
+   cd [repository-directory]
+   ```
+
+2. **Build the Project**:
+   ```bash
+   ./mvnw clean install
+   ```
+
+3. **Run the Application**:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+
+4. **Access the Application**:
+   - To get the localhost port number, you have to run the application.  At the end of the process, it will tell you what port you are running on.
+     For example:Application is running on port 51967
+
+## Testing
+
+The application includes unit tests to validate its functionality. To run the tests, execute:
+
+```bash
+./mvnw test
+```
+
+## Technologies Used
+
+- **Spring Boot**: For building the application.
+- **H2 Database**: For storing input numbers and tree structures.
+- **JUnit**: For writing and running tests.
+- **MockMvc**: For testing the web layer.
+
+## Future Enhancements
+
+- Implement additional tree traversal algorithms.
+- Add more visualizations for tree structures.
+- Enhance the UI for better user experience.
+
+## Troubleshooting
+
+- Ensure that Java and Maven are correctly installed and configured.
+- Check the application logs for any error messages if the application fails to start.
+
+## Contact
+
+For further information or assistance, please contact Kelly at kellystoyles@keyin.com.
+
+---
+
